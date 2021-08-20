@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Welcome Todo-List</title>
+<link type="text/css" rel="stylesheet" href="resources/css/reset.css">
+<link type="text/css" rel="stylesheet" href="resources/css/all.css">
+<style type="text/css">
+
+	html , body {
+	
+		height: 100%;
+	}
+	
+	.wrap {
+		display:flex;
+		flex-direction: column;
+		height:100%;	
+		background-size:cover;
+		background-repeat:no-repeat;
+		min-width: 500px;
+		
+	}
+
+	
+	.location {
+		height:80px;
+		flex-shrink:0;
+		color:white;
+	}
+	
+	.location > div {
+		height:80px;
+		font-size: 25px;
+		position:absolute;
+		right:15px;
+		line-height: 80px;
+	}
+	
+	.main {
+		color:white;
+		display:flex;
+		height:100%;
+		align-items:center;
+		min-height:500px;
+	}
+	
+	
+	.wrap_box {
+		display:flex;
+		justify-content: center;
+		align-items:center;
+		height:100%;
+		width:100%;
+	
+	}
+	
+	
+	.box {
+		
+		display:flex;
+		height:25vw;
+		width:50vw;
+		max-height:360px;
+		min-height:200px;
+		max-width:720px;
+		min-width:400px;
+		
+		background-color:rgb(0,0,0,0.5);
+		flex-direction: column;
+		text-align: center;
+		justify-content: space-around;
+		align-items: center;
+		
+	}
+
+	#userName {
+		height: 50px;
+		font-size: 35px;
+		line-height: 50px;
+		margin-top:10px;
+	}
+	
+	#date {
+		height: 30px;
+		font-size:25px;
+		transform:translateY(-20%);
+	}
+	
+	#name {
+		height:200px;
+		width:70%;
+		transform:translateY(-20%);
+	}
+	
+	.frm_todo, .todo {
+		height:100%;
+		width:100%;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	#name_box , #todo_box{
+		height:40%;
+		width:80%;
+		border-radius: 35%;
+		background-color: transparent;
+		border-top-color: transparent;
+		border-right-color: transparent;
+		border-left-color: transparent;
+		border-bottom-color : white;
+		text-align: center;
+		font-size:25px;
+		outline:none;
+		color:white;
+		
+	}
+	
+	#name_box::placeholder , #todo_box::placeholder {
+	
+		color:white;
+	
+	}
+
+	
+	
+	#write {
+		
+		width:70%;
+		height:70px;
+	
+	}
+	
+	#write * {
+		height: 40px;
+		border-radius: 10px;
+		width:100%;
+		font-size:20px;
+		
+		
+	}
+	
+	.foot {
+		
+		height:80px;
+		flex-shrink:0;
+	}
+	
+	.foot > div {
+		position:absolute;
+		height:80px;
+		font-size: 25px;
+		left:15px;
+		line-height: 80px;
+		color:white;
+	}
+
+
+	
+	.list_box {
+		background-color:rgb(0,0,0,0.5);
+		flex-shrink:0;
+		width: 300px;
+		height: 100%;
+		display:none;
+		overflow: scroll;
+		
+	
+	}
+	
+	.list_box::-webkit-scrollbar {
+  	
+  	 	display:none;
+	}
+	
+	.list_box > p {
+	
+		color: white;
+		font-weight: bolder;
+		text-align: center;
+		margin: 20px 0 20px 0;
+		font-size:25px;
+	}
+
+	.list_box > div {
+		
+		margin:40px;
+		padding:10px;
+		width: 200px;
+		height: 100px;
+		font-size:20px;
+		background-color:rgb(255,255,255,0.5);
+		position: relative;
+	}
+
+
+	.delete {
+		
+		position: absolute;
+		bottom: 10px;
+		right:15px;
+		color:gray;
+
+	}
+
+</style>
+<script defer type="text/javascript" src="resources/js/bg.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+	<div class='location'><div>안녕하세요 서울입니다.</div></div>
+	<div class='main'>
+		<div class='list_box'>
+			<p>Your Work</p>
+		</div>
+		<div class="wrap_box">
+			<div class="box">
+				<div id="userName">Welcome</div>
+				<div id='date'>10:18:1</div>
+				<div id='name'>
+					<form action="#" class='frm_todo'>
+						<input id="name_box" type="text" placeholder="Type your name here">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='foot'><div>서울 중구 신당동</div></div>
+</div>
+
+
+
+
+<script defer type="text/javascript" src="resources/js/main.js"></script>
+
+</body>
+</html>
